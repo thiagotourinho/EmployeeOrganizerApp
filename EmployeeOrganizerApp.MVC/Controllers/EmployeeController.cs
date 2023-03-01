@@ -14,5 +14,21 @@ namespace EmployeeOrganizerApp.MVC.Controllers
             employeeList = response.Content.ReadAsAsync<IEnumerable<mvcEmployeeModel>>().Result;
             return View(employeeList);
         }
+
+        [HttpGet]
+        public ActionResult AddOrEdit(int id = 0)
+        {
+
+            return View(new mvcEmployeeModel());
+        }
+
+        [HttpPost]
+        public ActionResult AddOrEdit()
+        {
+
+            return View();
+        }
+
+
     }
 }
