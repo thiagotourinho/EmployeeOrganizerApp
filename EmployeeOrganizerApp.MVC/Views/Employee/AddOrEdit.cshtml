@@ -10,90 +10,94 @@
     {
         @Html.HiddenFor(model => Model.EmployeeID)
 
-        <div class="input-group mb-3">
-            <div class="input-group-text">
+        <div div class="form-group">
+            <div>
                 @Html.LabelFor(model => model.Name)
             </div>
-            <div class="input-group-text">
+            <div>
                 @Html.EditorFor(model => model.Name)
             </div>
-            <div class="input-group-text">
+            <div>
                 @Html.ValidationMessageFor(model => model.Name)
             </div>
         </div>
         <br />
 
-        <div class="input-group mb-3">
-            <div class="input-group-text">
+        <div class="form-group">
+            <div>
                 @Html.LabelFor(model => model.BirthDate)
             </div>
-            <div class="input-group-text">
+            <div>
                 @Html.EditorFor(model => model.BirthDate)
             </div>
-            <div class="input-group-text">
+            <div>
                 @Html.ValidationMessageFor(model => model.BirthDate)
             </div>
         </div>
         <br />
-        <div class="input-group mb-3">
-            <div class="input-group-text">
+
+        <div class="form-group">
+            <div>
                 @Html.LabelFor(model => model.Gender)
             </div>
-            <div class="input-group-text">
+            <div>
                 @Html.EditorFor(model => model.Gender)
             </div>
-            <div class="input-group-text">
+            <div>
                 @Html.ValidationMessageFor(model => model.Gender)
             </div>
         </div>
         <br />
-        <div class="input-group mb-3">
-            <div class="input-group-text">
+
+        <div class="form-group">
+            <div>
                 @Html.LabelFor(model => model.Email)
             </div>
-            <div class="input-group-text">
+            <div>
                 @Html.EditorFor(model => model.Email)
             </div>
-            <div class="input-group-text">
+            <div>
                 @Html.ValidationMessageFor(model => model.Email)
             </div>
         </div>
         <br />
-        <div class="input-group mb-3">
-            <div class="input-group-text">
+
+        <div class="form-group">
+            <div>
                 @Html.LabelFor(model => model.CPF)
             </div>
-            <div class="input-group-text">
+            <div>           
                 @Html.EditorFor(model => model.CPF)
             </div>
-            <div class="input-group-text">
+            <div>          
                 @Html.ValidationMessageFor(model => model.CPF)
-            </div>
+          </div>
         </div>
         <br />
-        <div class="input-group mb-3">
-            <div class="input-group-text">
+
+        <div class="form-group">
+            <div>
                 @Html.LabelFor(model => model.Team)
             </div>
-            <div class="input-group-text">
+            <div>
                 @Html.EditorFor(model => model.Team)
             </div>
-            <div class="input-group-text">
+            <div>
                 @Html.ValidationMessageFor(model => model.Team)
             </div>
         </div>
         <br />
-        <div class="input-group mb-3">
+
+        <div>
             <input typeof="submit" value="Submit" class="btn btn-primary" />
             <input typeof="reset" value="Reset" class="btn btn-secondary" />
         </div>
+    }
 
+    @using (Html.BeginScripts())
+    {
+        <script>
+            alert('hello');
+        </script>
     }
 </div>
-
-@using (Html.BeginScripts())
-{
-    <script>
-        alert('hello');
-    </script>
-}
