@@ -8,6 +8,8 @@ namespace EmployeeOrganizerApp.MVC.Models
     {
        
         public int EmployeeID { get; set; }
+
+        [Required(ErrorMessage ="this field is required")]
         public string Name { get; set; } = "";
         public DateTime BirthDate { get; set; }
         public string Gender { get; set; } = "";

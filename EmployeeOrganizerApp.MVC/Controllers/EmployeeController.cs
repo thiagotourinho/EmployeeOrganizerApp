@@ -14,8 +14,7 @@ namespace EmployeeOrganizerApp.MVC.Controllers
             employeeList = response.Content.ReadAsAsync<IEnumerable<mvcEmployeeModel>>().Result;
             return View(employeeList);
         }
-
-        [HttpGet]
+               
         public ActionResult AddOrEdit(int id = 0)
         {
 
@@ -23,10 +22,12 @@ namespace EmployeeOrganizerApp.MVC.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddOrEdit()
+        public ActionResult AddOrEdit(mvcEmployeeModel employee)
         {
+            HttpResponseMessage response = GlobalVariables.WebApiClient.PostAsJsonAsync("Employee", employee).Result;
 
-            return View();
+
+            return RedirectToAction("Index");
         }
 
 
