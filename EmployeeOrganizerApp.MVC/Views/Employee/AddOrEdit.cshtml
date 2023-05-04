@@ -86,9 +86,17 @@
 
 @section ScriptsFooter{
     <script type="text/javascript">
-        //$(function () {
-        //    alert('render test');
-        //});
+        $(function () {
+           var successMessage = '@TempData["SucessMessage"]'
+           if (successMessage='')
+                alertify.success(successMessage);
+                
+        });
+        $(function Delete(id)()){
+            alertify.confirm('Web API', 'Are you sure to delete this record? ', function(){
+                window.location.href = '@Url.Action("Delete", "Employee")/'+id;
+            }, null)
+        }
     </script>
 
     <script src="@Url.Content("~/lib/jquery/dist/jquery.min.js")"></script>
